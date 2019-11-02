@@ -4,6 +4,10 @@ variable "memory_size" {
   default = "128"
 }
 
+variable env_vars {
+  default = {}
+}
+
 // CI/CD
 variable "ci_containers_storage_name" {
   default = "tf-ci"
@@ -17,5 +21,3 @@ variable "branch" {}
 variable "main_domain" {}
 variable "zone_id" {}
 variable "certificate_arn" {}
-
-variable "sentry_key" {}

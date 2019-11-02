@@ -26,9 +26,7 @@ resource "aws_lambda_function" "service" {
   memory_size = "${var.memory_size}"
   role        = "${aws_iam_role.service.arn}"
   environment {
-    variables = {
-      SENTRY_KEY = "${var.sentry_key}"
-    }
+    variables = "${var.env_vars}"
   }
 }
 
