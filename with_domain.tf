@@ -21,6 +21,6 @@ resource "aws_api_gateway_base_path_mapping" "api" {
   count = "${var.main_domain != "" ? 1 : 0}"
 
   api_id      = "${aws_api_gateway_rest_api.api.id}"
-  stage_name  = "${aws_api_gateway_deployment.api[0].stage_name}"
+  stage_name  = "${aws_api_gateway_deployment.api.stage_name}"
   domain_name = "${aws_api_gateway_domain_name.api[0].domain_name}"
 }
