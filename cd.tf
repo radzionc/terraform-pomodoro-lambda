@@ -97,7 +97,7 @@ resource "aws_codebuild_project" "codebuild" {
 
     environment_variable {
       name = "BUCKET"
-      value = "${aws_s3_bucket.lambdas_storage.bucket}"
+      value = "${aws_s3_bucket.lambda_storage.bucket}"
     }
   }
   source {
