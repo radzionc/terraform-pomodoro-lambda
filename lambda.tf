@@ -39,15 +39,8 @@ resource "aws_iam_policy" "service" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": [
-        "cloudwatch:*",
-        "logs:*",
-        "s3:*",
-        "ses:*",
-        "cloudfront:*",
-        "dynamodb:*"
-      ],
       "Effect": "Allow",
+      "Action": "*",
       "Resource": "*"
     }
   ]
@@ -84,10 +77,8 @@ resource "aws_iam_role_policy" "service" {
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Action": [
-        "dynamodb:*"
-      ],
       "Effect": "Allow",
+      "Action": "*",
       "Resource": "*"
     }
   ]
