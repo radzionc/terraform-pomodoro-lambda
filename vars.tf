@@ -8,6 +8,10 @@ variable env_vars {
   default = {}
 }
 
+variable with_api_gateway {
+  default = true
+}
+
 // CI/CD
 variable "ci_containers_storage_name" {
   default = "tf-ci"
