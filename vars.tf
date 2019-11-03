@@ -12,10 +12,6 @@ variable with_api_gateway {
   default = true
 }
 
-variable function_provider {
-  default = ""
-}
-
 // CI/CD
 variable "ci_containers_storage_name" {
   default = "tf-ci"
