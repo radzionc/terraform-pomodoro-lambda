@@ -37,7 +37,7 @@ resource "aws_api_gateway_method" "api" {
   count = "${var.with_api_gateway ? 1 : 0}"
 
   rest_api_id   = "${aws_api_gateway_rest_api.api[0].id}"
-  resource_id   = "${aws_api_gateway_resource.api.id}"
+  resource_id   = "${aws_api_gateway_resource.api[0].id}"
   http_method   = "ANY"
   authorization = "NONE"
 }
