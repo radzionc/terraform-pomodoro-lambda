@@ -1,8 +1,11 @@
-
 variable "name" {}
 
 variable "memory_size" {
   default = "128"
+}
+
+variable "timeout" {
+  default = "50"
 }
 
 variable env_vars {

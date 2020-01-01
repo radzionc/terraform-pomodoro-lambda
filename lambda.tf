@@ -22,7 +22,7 @@ resource "aws_lambda_function" "service" {
 
   handler     = "src/lambda.handler"
   runtime     = "nodejs10.x"
-  timeout     = "50"
+  timeout     = "${var.timeout}"
   memory_size = "${var.memory_size}"
   role        = "${aws_iam_role.service.arn}"
   environment {
