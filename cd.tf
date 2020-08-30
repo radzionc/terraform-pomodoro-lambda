@@ -110,6 +110,10 @@ resource "aws_codepipeline" "pipeline" {
 
   name     = "tf-${var.name}-pipeline"
   role_arn = "${aws_iam_role.codepipeline_role[0].arn}"
+
+  // solution from https://github.com/terraform-providers/terraform-provider-aws/issues/2854
+  ignore_changes = [stage[0].action[0].configuration]
+
   artifact_store {
     location = "${aws_s3_bucket.artifacts[0].bucket}"
     type     = "S3"
