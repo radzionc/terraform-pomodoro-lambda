@@ -29,7 +29,7 @@ module "lambda" {
  - function_arn
  - function_name
 
-## [Story on Medium](https://medium.com/p/18d92162f33)
+## [Blog post](https://geekrodion.com/blog/lambda-module)
 
 ## License
 
